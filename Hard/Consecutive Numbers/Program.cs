@@ -2,6 +2,9 @@
 {
     static void Main(string[] args)
     {
+
+
+
     }
     static bool Cons(int[] arr)
     {
