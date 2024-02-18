@@ -2,19 +2,15 @@
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(WeekAfter("21/12/2023"));
 
     }
     static string WeekAfter(string date)
     {
-        var x = date.Split('/');
-        var day = x[0];
-        if (day.StartsWith("0"))
-        {
-            day = (int.Parse(day) + 7).ToString();
-        }
-        else day = (int.Parse(day) + 7).ToString();
-
-        return day + date.Substring(2);
+        return new DateTime(
+        Convert.ToInt32(date.Split('/')[2]),
+        Convert.ToInt32(date.Split('/')[1]),
+        Convert.ToInt32(date.Split('/')[0]))
+        .AddDays(7).Date.ToString("dd/MM/yyyy");
     }
+
 }
